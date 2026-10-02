@@ -1,0 +1,24 @@
+PLANT DISEASE PREDICTION - EVALUATION REPORT
+============================================================
+
+                                             precision    recall  f1-score   support
+
+             Pepper - bell - Bacterial spot     0.9000    0.9730    0.9351        37
+                    Pepper - bell - healthy     0.9655    1.0000    0.9825        56
+                      Potato - Early blight     0.9231    0.9730    0.9474        37
+                           Potato - healthy     0.7143    1.0000    0.8333         5
+                       Potato - Late blight     0.8919    0.8919    0.8919        37
+                       Tomato - Target Spot     0.6897    0.7547    0.7207        53
+               Tomato - Tomato mosaic virus     0.9286    0.9286    0.9286        14
+    Tomato - Tomato YellowLeaf - Curl Virus     1.0000    0.8678    0.9292       121
+                      Tomato Bacterial spot     0.8132    0.9250    0.8655        80
+                        Tomato Early blight     0.9091    0.5405    0.6780        37
+                             Tomato healthy     0.8676    0.9833    0.9219        60
+                         Tomato Late blight     0.8571    0.9167    0.8859        72
+                           Tomato Leaf Mold     0.8378    0.8857    0.8611        35
+                  Tomato Septoria leaf spot     0.8571    0.7164    0.7805        67
+Tomato Spider mites Two spotted spider mite     0.8308    0.8571    0.8438        63
+
+                                   accuracy                         0.8734       774
+                                  macro avg     0.8657    0.8809    0.8670       774
+                               weighted avg     0.8788    0.8734    0.8714       774

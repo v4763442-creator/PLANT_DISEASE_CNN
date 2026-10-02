@@ -1,0 +1,58 @@
+================================================================================
+PLANT VILLAGE DATASET INSPECTION REPORT
+================================================================================
+
+Inspection Timestamp: 2026-10-02
+Inspection Status: Verified
+
+1. Dataset Path:
+   c:\Users\HP\Downloads\plant_disease_CNN\PlantVillage\PlantVillage
+   (Outer directory: c:\Users\HP\Downloads\plant_disease_CNN\PlantVillage)
+
+2. Total Classes: 15
+   (Note: NOT 38 classes; the local workspace dataset contains 15 classes spanning Pepper, Potato, and Tomato crops)
+
+3. Total Images / Files: 20,639
+   - Valid Readable Images: 20,638
+   - Corrupted / Metadata Artifacts: 1 (svn-r6Yb5c in Tomato__Tomato_YellowLeaf__Curl_Virus)
+   - Dataset Disk Size: ~326.38 MB (0.32 GB)
+
+4. Image Formats & Dimensions:
+   - Formats Detected: JPEG, PNG
+   - Uniform Dimensions: (256, 256) pixels (Width x Height)
+   - Channels: 3 (RGB)
+
+5. Per-Class Image Distribution:
+   -----------------------------------------------------------------------------
+   Class Name                                              Image Count
+   -----------------------------------------------------------------------------
+   Pepper__bell___Bacterial_spot                           997
+   Pepper__bell___healthy                                  1478
+   Potato___Early_blight                                   1000
+   Potato___Late_blight                                    1000
+   Potato___healthy                                        152
+   Tomato_Bacterial_spot                                   2127
+   Tomato_Early_blight                                     1000
+   Tomato_Late_blight                                      1909
+   Tomato_Leaf_Mold                                        952
+   Tomato_Septoria_leaf_spot                               1771
+   Tomato_Spider_mites_Two_spotted_spider_mite             1676
+   Tomato__Target_Spot                                     1404
+   Tomato__Tomato_YellowLeaf__Curl_Virus                   3209
+   Tomato__Tomato_mosaic_virus                             373
+   Tomato_healthy                                          1591
+   -----------------------------------------------------------------------------
+   Total:                                                  20639
+
+6. Class Imbalance Assessment:
+   - Moderate-to-high class imbalance is observed.
+   - Largest class: Tomato__Tomato_YellowLeaf__Curl_Virus (3,209 images)
+   - Smallest class: Potato___healthy (152 images)
+   - Imbalance ratio: ~21:1 max-to-min ratio.
+   - Solution: Class weighting is implemented during model training to avoid bias against minority classes (such as Potato___healthy and Tomato__Tomato_mosaic_virus).
+
+7. Integrity & Preprocessing Notes:
+   - 1 non-image SVN artifact ('svn-r6Yb5c') was identified in the Tomato__Tomato_YellowLeaf__Curl_Virus class folder.
+   - Per project constraints, the original dataset remains strictly untouched.
+   - The data loading pipeline explicitly verifies/filters valid image extensions (.jpg, .jpeg, .png) or ignores corrupted artifacts during ingestion to guarantee zero runtime failures.
+================================================================================

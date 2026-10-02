@@ -1,0 +1,44 @@
+# Byte-compiled / optimized / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env*/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDE, OS, and Editors
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# Datasets and large raw data files (STRICTLY EXCLUDED FROM GIT)
+PlantVillage/
+dataset/
+*.csv
+
+# Scratch, temporary and local development files
+scratch/
+*.tmp
+*.log
+
+# Model checkpoints: Exclude intermediate experiment checkpoints
+*.h5
+*.keras
+models/experiment_02/*.keras
+models/plant_disease_model.keras
+models/stage1_best_model.keras
+
+# TRACK ONLY THE FINAL PRODUCTION MODEL AND MAPPING FOR DEPLOYMENT:
+!models/best_plant_disease_model.keras
+!models/class_names.json
