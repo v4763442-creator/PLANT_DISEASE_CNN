@@ -2,10 +2,26 @@
 
 An end-to-end deep learning web application that accurately diagnoses plant diseases from leaf imagery using **Convolutional Neural Networks (CNN)**, **Transfer Learning with MobileNetV2**, and **Explainable AI (Grad-CAM)**.
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue.svg)](https://www.python.org/)
-[![TensorFlow 2.x](https://img.shields.io/badge/TensorFlow-2.20%2B-orange.svg)](https://tensorflow.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Live Demo](https://img.shields.io/badge/Streamlit%20Community%20Cloud-Live%20Demo-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://share.streamlit.io)
+[![Python 3.11](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://tensorflow.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
+---
+
+## 🌐 Live Demo Application
+
+Access the live, interactive deep learning diagnostic app hosted on Streamlit Community Cloud:
+
+🚀 **[Click Here to Open the Live Demo](https://share.streamlit.io)** *(or open via your deployed Streamlit App URL)*
+
+### 🎮 How to Test the Demo App:
+1. **Try Bundled Samples:** Select **"Use Sample Leaf from Dataset"** in the sidebar to test real-world leaf samples (*Tomato Early Blight, Pepper Bacterial Spot, Healthy foliage, etc.*) without needing to upload anything.
+2. **Upload Your Own Leaf:** Switch to **"Upload Your Own Leaf Image"** to drag and drop any crop leaf photograph (`.jpg`, `.jpeg`, `.png`).
+3. **Run Diagnosis:** Click **"🔍 Diagnose Leaf Disease"** to generate:
+   - **Disease Diagnosis & Health Badge** (`✅ Healthy` vs. `⚠️ Disease Detected`)
+   - **Confidence Score & Top-3 Likelihoods**
+   - **Grad-CAM Attribution Heatmap** visually explaining which leaf lesions triggered the model's prediction.
 
 ---
 
