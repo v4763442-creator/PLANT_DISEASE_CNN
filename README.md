@@ -128,67 +128,6 @@ plant_disease_CNN/
 ├── INTERVIEW_NOTES.md                  # Viva/interview preparation guide (25 Q&As)
 ├── dataset_info.txt                    # Verified dataset inspection report
 └── .gitignore                          # Excludes raw dataset, large checkpoints, venv
-```
-
----
-
-## 💻 Local Installation & Setup
-
-### 1. Clone Repository & Install Dependencies
-```bash
-git clone https://github.com/<your-username>/plant-disease-prediction.git
-cd plant-disease-prediction
-
-# Optional: Create and activate virtual environment
-python -m venv .venv
-# Windows:
-.venv\Scripts\activate
-# Linux/Mac:
-source .venv/bin/activate
-
-pip install -r requirements.txt
-```
-
-### 2. Launch the Streamlit App Locally
-```bash
-streamlit run app.py
-```
-Open **`http://localhost:8501`** in your browser.
-
-### 3. Run Inference from CLI
-```bash
-python -m src.predict --image sample_images/sample_tomato_early_blight.jpg
-```
-
----
-
-## ☁️ Streamlit Community Cloud Deployment Guide
-
-Follow these steps to deploy this application to **Streamlit Community Cloud** (free hosting):
-
-### Step 1: Push Code to GitHub
-1. Create a new public or private repository on GitHub (e.g., `plant-disease-prediction`).
-2. Run the following terminal commands:
-```bash
-git add .
-git commit -m "feat: complete plant disease prediction web app with MobileNetV2 and Grad-CAM"
-git branch -M main
-git remote add origin https://github.com/<your-username>/plant-disease-prediction.git
-git push -u origin main
-```
-*(The raw dataset is excluded by `.gitignore`; only the 24.5 MB production model, code, and demo samples are pushed).*
-
-### Step 2: Deploy on Streamlit Cloud
-1. Go to **[share.streamlit.io](https://share.streamlit.io)** and log in with GitHub.
-2. Click **"New app"**.
-3. Fill in the deployment form:
-   - **Repository:** `<your-username>/plant-disease-prediction`
-   - **Branch:** `main`
-   - **Main file path:** `app.py`
-4. Click **"Deploy!"**.
-5. Streamlit will install `requirements.txt` and launch the app live on the web within 2–3 minutes.
-
----
 
 ## ⚠️ Limitations & Future Work
 
