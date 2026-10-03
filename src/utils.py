@@ -9,11 +9,7 @@ import random
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Union
 
-import matplotlib.pyplot as plt
 import numpy as np
-import seaborn as sns
-from sklearn.metrics import classification_report, confusion_matrix
-from sklearn.utils.class_weight import compute_class_weight
 
 
 def set_seed(seed: int = 42) -> None:
@@ -52,7 +48,6 @@ def format_class_name(raw_name: str) -> str:
     into a clean, readable name (e.g., 'Tomato: Tomato Yellow Leaf Curl Virus').
     """
     clean = raw_name.replace("___", " - ").replace("__", " - ").replace("_", " ")
-    # Clean up double dashes or double spaces
     clean = " ".join(clean.split())
     clean = clean.replace(" - - ", " - ")
     return clean
@@ -63,6 +58,8 @@ def calculate_class_weights(labels: np.ndarray) -> Dict[int, float]:
     Calculate balanced class weights to address dataset imbalance.
     Returns a dictionary mapping class integer index to weight.
     """
+    from sklearn.utils.class_weight import compute_class_weight
+
     classes = np.unique(labels)
     weights = compute_class_weight(
         class_weight="balanced",
@@ -76,8 +73,9 @@ def calculate_class_weights(labels: np.ndarray) -> Dict[int, float]:
 def plot_training_history(history_dict: dict, save_path: Optional[Union[str, Path]] = None) -> None:
     """
     Plot and save training & validation accuracy and loss curves.
-    Accepts history dictionary or History object's .history attribute.
     """
+    import matplotlib.pyplot as plt
+
     acc = history_dict.get("accuracy", [])
     val_acc = history_dict.get("val_accuracy", [])
     loss = history_dict.get("loss", [])
@@ -125,6 +123,10 @@ def plot_confusion_matrix(
     """
     Compute, plot, and save the confusion matrix heatmap.
     """
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+    from sklearn.metrics import confusion_matrix
+
     cm = confusion_matrix(y_true, y_pred)
     if normalize:
         cm = cm.astype("float") / cm.sum(axis=1)[:, np.newaxis]
@@ -168,6 +170,8 @@ def save_classification_report(
     """
     Generate and save scikit-learn classification report (precision, recall, f1-score).
     """
+    from sklearn.metrics import classification_report
+
     clean_labels = [format_class_name(c) for c in class_names]
     report = classification_report(
         y_true,
